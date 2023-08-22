@@ -1,5 +1,5 @@
 ---
-- hosts: group_windows
+- hosts: group_ubuntu
 
   become: true
   become_method: sudo
