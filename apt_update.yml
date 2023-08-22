@@ -1,5 +1,5 @@
 ---
-- hosts: windows
+- hosts: Windows
 
   become: true
   become_method: sudo
