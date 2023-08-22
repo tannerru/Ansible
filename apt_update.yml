@@ -1,5 +1,5 @@
 ---
-- hosts: group_ubuntu,group_ubuntu_worker,group_controller_ubuntu
+- hosts: group_ubuntu:group_ubuntu_worker:group_controller_ubuntu
 
   become: true
   become_method: sudo
