@@ -4,7 +4,7 @@
   become: yes
   become_method: sudo
 
- tasks:
+  tasks:
     - name: Join to AD
       thulium_drake.adjoin:
         adjoin_no_log: "{{ adjoin_no_log }}"
