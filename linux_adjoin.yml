@@ -6,5 +6,22 @@
 
   tasks:
     - name: Join to AD
-      thulium_drake.adjoin
-       
+      thulium_drake.adjoin:
+        adjoin_no_log: "{{ adjoin_no_log }}"
+        adjoin_sssd_homedir: "{{ adjoin_sssd_homedir }}"
+        adjoin_sssd_default_shell: "{{ adjoin_sssd_default_shell }}"
+        adjoin_kerberos_enctypes: "{{ adjoin_kerberos_enctypes }}"
+        adjoin_netbios_name: "{{ adjoin_netbios_name }}"
+        adjoin_configure_sudo: "{{ adjoin_configure_sudo }}"
+        name: "{{ name }}"
+        workgroup: "{{ workgroup }}"
+        domain_controllers: "{{ domain_controllers }}"
+        ldap_base_dn: "{{ ldap_base_dn }}"
+        computer_objects_path: "{{ computer_objects_path }}"
+        dyndns_update: "{{ dyndns_update }}"
+        dyndns_refresh_interval: "{{ dyndns_refresh_interval }}"
+        dyndns_ttl: "{{ dyndns_ttl }}"
+        dyndns_update_ptr: "{{ dyndns_update_ptr }}"
+        linux_admins: "{{ linux_admins }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
