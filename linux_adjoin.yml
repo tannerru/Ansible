@@ -8,4 +8,4 @@
     - name: Join to AD
       include_role:
         name: thulium_drake.adjoin
-        roles_from_path: /root/.ansible/roles
+        
