@@ -4,9 +4,7 @@
   become: yes
   become_method: sudo
 
-
   tasks:
     - name: Join to AD
-       include_role:
+      include_role:
         name: thulium_drake.adjoin
-        
