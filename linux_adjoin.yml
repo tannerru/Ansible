@@ -3,10 +3,10 @@
   gather_facts: yes
   become: yes
   become_method: sudo
-  roles:
-    - thulium_drake.adjoin
+
 
   tasks:
     - name: Join to AD
-      thulium_drake.adjoin:
+       include_role:
+        name: thulium_drake.adjoin
         
