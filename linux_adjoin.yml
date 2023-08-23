@@ -6,7 +6,9 @@
 
   tasks:
     - name: Join to AD
-      thulium_drake.adjoin:
+      include_role:
+        name: thulium_drake.adjoin
+      vars:
         adjoin_no_log: "{{ adjoin_no_log }}"
         adjoin_sssd_homedir: "{{ adjoin_sssd_homedir }}"
         adjoin_sssd_default_shell: "{{ adjoin_sssd_default_shell }}"
