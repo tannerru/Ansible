@@ -4,10 +4,9 @@
   become: yes
   become_method: sudo
 
-  tasks:
+ tasks:
     - name: Join to AD
-      include_role:
-        name: thulium_drake.adjoin
+      thulium_drake.adjoin:
         adjoin_no_log: "{{ adjoin_no_log }}"
         adjoin_sssd_homedir: "{{ adjoin_sssd_homedir }}"
         adjoin_sssd_default_shell: "{{ adjoin_sssd_default_shell }}"
