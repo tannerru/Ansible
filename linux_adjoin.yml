@@ -1,9 +1,8 @@
----
 - name: Configure System
   hosts: all
   gather_facts: yes
   become: yes
-  #become_method: sudo
+  # become_method: sudo
 
   tasks:
     - name: Set DNS
@@ -45,14 +44,30 @@
         linux_admins: "{{ linux_admins }}"
         username: "{{ username }}"
         password: "{{ password }}"
-    
+
     - name: Disable FQDN in SSSD configuration
       lineinfile:
         path: /etc/sssd/sssd.conf
         regexp: '^use_fully_qualified_names = .*'
         line: 'use_fully_qualified_names = False'
 
-    - name: Reboot the system
-      reboot:
-        reboot_timeout: 300
-        msg: "Rebooting the system"
+    - name: Reboot the server
+      tags: reboot
+      become: yes
+      become_user: root
+      shell: "sleep 5 && reboot"
+      async: 1
+      poll: 0
+
+    - name: Wait for the reboot and reconnect
+      wait_for:
+        port: 22
+        host: '{{ (ansible_ssh_host|default(ansible_host))|default(inventory_hostname) }}'
+        search_regex: OpenSSH
+        delay: 10
+        timeout: 60
+      connection: local
+
+    - name: Check the Uptime of the servers
+      shell: "uptime"
+      register: Uptime
