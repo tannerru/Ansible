@@ -1,4 +1,6 @@
-- hosts: all
+---
+- name: Configure System
+  hosts: all
   gather_facts: yes
   become: yes
   become_method: sudo
@@ -44,13 +46,13 @@
         username: "{{ username }}"
         password: "{{ password }}"
     
-  - name: Disable FQDN in SSSD configuration
+    - name: Disable FQDN in SSSD configuration
       lineinfile:
-        path: /etc/sssd/sssd.conf  # Path to the SSSD configuration file
+        path: /etc/sssd/sssd.conf
         regexp: '^use_fully_qualified_names = .*'
         line: 'use_fully_qualified_names = False'
 
-  - name: Reboot the system
+    - name: Reboot the system
       reboot:
-        reboot_timeout: 300  # Optional: Set a reboot timeout in seconds (default is 3600 seconds)
+        reboot_timeout: 300
         msg: "Rebooting the system"
