@@ -68,6 +68,4 @@
         timeout: 60
       connection: local
 
-    - name: Check the Uptime of the servers
-      shell: "uptime"
-      register: Uptime
+    
