@@ -43,3 +43,14 @@
         linux_admins: "{{ linux_admins }}"
         username: "{{ username }}"
         password: "{{ password }}"
+    
+  - name: Disable FQDN in SSSD configuration
+      lineinfile:
+        path: /etc/sssd/sssd.conf  # Path to the SSSD configuration file
+        regexp: '^use_fully_qualified_names = .*'
+        line: 'use_fully_qualified_names = False'
+
+  - name: Reboot the system
+      reboot:
+        reboot_timeout: 300  # Optional: Set a reboot timeout in seconds (default is 3600 seconds)
+        msg: "Rebooting the system"
