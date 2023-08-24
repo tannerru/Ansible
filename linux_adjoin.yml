@@ -15,6 +15,12 @@
         dns_domains:
           - nerd.local
 
+    - name: Enable Password Authentication
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^#?PasswordAuthentication'
+        line: 'PasswordAuthentication yes'
+
     - name: Join to AD
       include_role:
         name: thulium_drake.adjoin
