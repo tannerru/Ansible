@@ -18,7 +18,7 @@
 
     - name: Enable Password Authentication
       lineinfile:
-        path: /etc/ssh/ssh_config
+        path: /etc/ssh/sshd_config
         regexp: '^#?PasswordAuthentication'
         line: 'PasswordAuthentication yes'
 
