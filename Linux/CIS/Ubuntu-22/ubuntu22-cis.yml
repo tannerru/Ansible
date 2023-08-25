@@ -69,5 +69,24 @@
       ubtu22cis_rule_1_8_9: true
       ubtu22cis_rule_1_8_10: true
       ubtu22cis_rule_1_9: true
-      ubtu22cis_bootloader_password_hash: "grub.pbkdf2.sha512.changethispassword"
-
+      expected_tmp_mnt: fstab
+        ubtu22cis_config_aide: true
+        ubtu22cis_aide_cron:
+          cron_user: root
+          cron_file: /etc/cron.d/aide_cron
+          aide_job: '/usr/bin/aide --config /etc/aide/aide.conf --check'
+          aide_minute: 0
+          aide_hour: 5
+          aide_day: '*'
+          aide_month: '*'
+          aide_weekday: '*'
+        ubtu22cis_grub_user: root
+        ubtu22cis_set_grub_user_pass: false
+        ubtu22cis_grub_user_passwd: '$y$j9T$MBA5l/tQyWifM869nQjsi.$cTy0ConcNjIYOn6Cppo5NAky20osrkRxz4fEWA8xac6'  # Set to changeme
+        ubtu22cis_grub_user_file: /etc/grub.d/00_user
+        ubtu22cis_bootloader_password_hash: "grub.pbkdf2.sha512.changethispassword"
+        ubtu22cis_set_boot_pass: true
+        ubtu22cis_grub_file: /etc/default/grub.cfg
+        ubtu22cis_apparmor_disable: false
+        ubtu22cis_apparmor_enforce_only: false
+        ubtu22cis_disable_dynamic_motd: true
