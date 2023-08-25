@@ -18,8 +18,8 @@ Here's a brief overview of the playbooks and roles included in this repository:
 
 In addition to the playbooks, this repository also includes the following roles:
 
-- `thulium_drake.adjoin`: Common configurations for all servers.
-- `ansible-role-dns`: Role for setting up a web server.
+- `thulium_drake.adjoin`: Used to join Linux machines to Windows AD.
+- `ansible-role-dns`: Used to configured DNS on Debian/RHEL
 
 ## Usage
 
