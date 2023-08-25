@@ -10,8 +10,8 @@ These Ansible playbooks are designed to make the deployment and management of in
 
 Here's a brief overview of the playbooks and roles included in this repository:
 
-- `playbook1.yml`: Brief description of what this playbook achieves.
-- `playbook2.yml`: Brief description of another playbook.
+- `Linux/AD-Join`: Brief description of what this playbook achieves.
+- `Linux/apt_update.yml`: Brief description of another playbook.
 - ...
 
 ### Roles
