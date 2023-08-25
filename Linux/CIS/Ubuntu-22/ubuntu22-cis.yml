@@ -1,75 +1,77 @@
+---
 - name: CIS Controls
   hosts: all
   gather_facts: yes
   become: yes
   tasks:
-  - name: Harden to CIS Ubuntu 22.04
-    include_role:
-      name: UBUNTU22-CIS
-    vars:
-      ubtu22cis_rule_1_1_1_1: true
-      ubtu22cis_rule_1_1_1_2: true
-      ubtu22cis_rule_1_1_1_3: true
-      ubtu22cis_rule_1_1_2_1: true
-      ubtu22cis_rule_1_1_2_2: true
-      ubtu22cis_rule_1_1_2_3: true
-      ubtu22cis_rule_1_1_2_4: true
-      ubtu22cis_rule_1_1_3_1: true
-      ubtu22cis_rule_1_1_3_2: true
-      ubtu22cis_rule_1_1_3_3: true
-      ubtu22cis_rule_1_1_4_1: true
-      ubtu22cis_rule_1_1_4_2: true
-      ubtu22cis_rule_1_1_4_3: true
-      ubtu22cis_rule_1_1_4_4: true
-      ubtu22cis_rule_1_1_5_1: true
-      ubtu22cis_rule_1_1_5_2: true
-      ubtu22cis_rule_1_1_5_3: true
-      ubtu22cis_rule_1_1_5_4: true
-      ubtu22cis_rule_1_1_6_1: true
-      ubtu22cis_rule_1_1_6_2: true
-      ubtu22cis_rule_1_1_6_3: true
-      ubtu22cis_rule_1_1_6_4: true
-      ubtu22cis_rule_1_1_7_1: true
-      ubtu22cis_rule_1_1_7_2: true
-      ubtu22cis_rule_1_1_7_3: true
-      ubtu22cis_rule_1_1_8_1: true
-      ubtu22cis_rule_1_1_8_2: true
-      ubtu22cis_rule_1_1_8_3: true
-      ubtu22cis_rule_1_1_9: true
-      ubtu22cis_rule_1_1_10: true
-      ubtu22cis_rule_1_2_1: true
-      ubtu22cis_rule_1_2_2: true
-      ubtu22cis_rule_1_3_1: true
-      ubtu22cis_rule_1_3_2: true
-      ubtu22cis_rule_1_4_1: true
-      ubtu22cis_rule_1_4_2: true
-      ubtu22cis_rule_1_4_3: true
-      ubtu22cis_rule_1_5_1: true
-      ubtu22cis_rule_1_5_2: true
-      ubtu22cis_rule_1_5_3: true
-      ubtu22cis_rule_1_5_4: true
-      ubtu22cis_rule_1_6_1_1: true
-      ubtu22cis_rule_1_6_1_2: true
-      ubtu22cis_rule_1_6_1_3: true
-      ubtu22cis_rule_1_6_1_4: true
-      ubtu22cis_rule_1_7_1: true
-      ubtu22cis_rule_1_7_2: true
-      ubtu22cis_rule_1_7_3: true
-      ubtu22cis_rule_1_7_4: true
-      ubtu22cis_rule_1_7_5: true
-      ubtu22cis_rule_1_7_6: true
-      ubtu22cis_rule_1_8_1: true
-      ubtu22cis_rule_1_8_2: true
-      ubtu22cis_rule_1_8_3: true
-      ubtu22cis_rule_1_8_4: true
-      ubtu22cis_rule_1_8_5: true
-      ubtu22cis_rule_1_8_6: true
-      ubtu22cis_rule_1_8_7: true
-      ubtu22cis_rule_1_8_8: true
-      ubtu22cis_rule_1_8_9: true
-      ubtu22cis_rule_1_8_10: true
-      ubtu22cis_rule_1_9: true
-      expected_tmp_mnt: fstab
+    - name: Harden to CIS Ubuntu 22.04
+      include_role:
+        name: UBUNTU22-CIS
+      vars:
+        ubtu22cis_rule_1_1_1_1: true
+        ubtu22cis_rule_1_1_1_2: true
+        ubtu22cis_rule_1_1_1_3: true
+        ubtu22cis_rule_1_1_2_1: true
+        ubtu22cis_rule_1_1_2_2: true
+        ubtu22cis_rule_1_1_2_3: true
+        ubtu22cis_rule_1_1_2_4: true
+        ubtu22cis_rule_1_1_3_1: true
+        ubtu22cis_rule_1_1_3_2: true
+        ubtu22cis_rule_1_1_3_3: true
+        ubtu22cis_rule_1_1_4_1: true
+        ubtu22cis_rule_1_1_4_2: true
+        ubtu22cis_rule_1_1_4_3: true
+        ubtu22cis_rule_1_1_4_4: true
+        ubtu22cis_rule_1_1_5_1: true
+        ubtu22cis_rule_1_1_5_2: true
+        ubtu22cis_rule_1_1_5_3: true
+        ubtu22cis_rule_1_1_5_4: true
+        ubtu22cis_rule_1_1_6_1: true
+        ubtu22cis_rule_1_1_6_2: true
+        ubtu22cis_rule_1_1_6_3: true
+        ubtu22cis_rule_1_1_6_4: true
+        ubtu22cis_rule_1_1_7_1: true
+        ubtu22cis_rule_1_1_7_2: true
+        ubtu22cis_rule_1_1_7_3: true
+        ubtu22cis_rule_1_1_8_1: true
+        ubtu22cis_rule_1_1_8_2: true
+        ubtu22cis_rule_1_1_8_3: true
+        ubtu22cis_rule_1_1_9: true
+        ubtu22cis_rule_1_1_10: true
+        ubtu22cis_rule_1_2_1: true
+        ubtu22cis_rule_1_2_2: true
+        ubtu22cis_rule_1_3_1: true
+        ubtu22cis_rule_1_3_2: true
+        ubtu22cis_rule_1_4_1: true
+        ubtu22cis_rule_1_4_2: true
+        ubtu22cis_rule_1_4_3: true
+        ubtu22cis_rule_1_5_1: true
+        ubtu22cis_rule_1_5_2: true
+        ubtu22cis_rule_1_5_3: true
+        ubtu22cis_rule_1_5_4: true
+        ubtu22cis_rule_1_6_1_1: true
+        ubtu22cis_rule_1_6_1_2: true
+        ubtu22cis_rule_1_6_1_3: true
+        ubtu22cis_rule_1_6_1_4: true
+        ubtu22cis_rule_1_7_1: true
+        ubtu22cis_rule_1_7_2: true
+        ubtu22cis_rule_1_7_3: true
+        ubtu22cis_rule_1_7_4: true
+        ubtu22cis_rule_1_7_5: true
+        ubtu22cis_rule_1_7_6: true
+        ubtu22cis_rule_1_8_1: true
+        ubtu22cis_rule_1_8_2: true
+        ubtu22cis_rule_1_8_3: true
+        ubtu22cis_rule_1_8_4: true
+        ubtu22cis_rule_1_8_5: true
+        ubtu22cis_rule_1_8_6: true
+        ubtu22cis_rule_1_8_7: true
+        ubtu22cis_rule_1_8_8: true
+        ubtu22cis_rule_1_8_9: true
+        ubtu22cis_rule_1_8_10: true
+        ubtu22cis_rule_1_9: true
+      vars:
+        expected_tmp_mnt: fstab
         ubtu22cis_config_aide: true
         ubtu22cis_aide_cron:
           cron_user: root
@@ -90,3 +92,8 @@
         ubtu22cis_apparmor_disable: false
         ubtu22cis_apparmor_enforce_only: false
         ubtu22cis_disable_dynamic_motd: true
+        ubtu22cis_warning_banner: |
+          Authorized uses only. All activity may be monitored and reported.
+        ubtu22cis_dconf_db_name: local
+        ubtu22cis_screensaver_idle_delay: 900  # Set max value for idle-delay in seconds (between 1 and 900)
+        ubtu22cis_screensaver_lock_delay: 5    # Set max value for lock-delay in seconds (between 0 and 5)
