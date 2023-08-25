@@ -69,3 +69,5 @@
       ubtu22cis_rule_1_8_9: true
       ubtu22cis_rule_1_8_10: true
       ubtu22cis_rule_1_9: true
+      ubtu22cis_bootloader_password_hash: "grub.pbkdf2.sha512.changethispassword"
+
