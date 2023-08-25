@@ -10,9 +10,9 @@ These Ansible playbooks are designed to make the deployment and management of in
 
 Here's a brief overview of the playbooks and roles included in this repository:
 
-- `Linux/AD-Join`: Brief description of what this playbook achieves.
-- `Linux/apt_update.yml`: Brief description of another playbook.
-- ...
+- `Linux/AD-Join`: Configures DNS, Enables SSH Password Authentication, Joins AD, Disables FQDN, Reboot & Wait
+- `Linux/apt_update.yml`: Simple playbook to run "apt update"
+- `Linux/apt_distro_upgrade.yml`: Simple playbook to run apt dist-upgrade
 
 ### Roles
 
