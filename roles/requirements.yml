@@ -1,7 +1,11 @@
 roles:
-  - name: thulium_drake.adjoin
-    version: 1.2.1
+- name: thulium_drake.adjoin
+  version: 1.2.1
 
-  - src: https://github.com/metno/ansible-role-dns
-    version: master
-    name: dns
+- src: https://github.com/metno/ansible-role-dns
+  version: master
+  name: dns
+
+- src: https://github.com/ansible-lockdown/UBUNTU22-CIS
+  version: master
+  name: UBUNTU22-CIS
