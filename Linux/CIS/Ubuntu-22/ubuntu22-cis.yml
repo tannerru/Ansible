@@ -84,7 +84,7 @@
           aide_weekday: '*'
         ubtu22cis_grub_user: root
         ubtu22cis_set_grub_user_pass: false
-        ubtu22cis_grub_user_passwd: '$yk0/90QD/Igs'  # Set to changeme
+        ubtu22cis_grub_user_passwd: 'grub.pbkdf2.sha512.10000.C49D02CE7417B299BACDEB8E40EA0C2F6D80218546FCBC283996030F512EF3B7CE2FBBD7CB745DA7EC1F0B92FF143554CC7F490D1E79F26851420D78AD0DB69F.FE116B4093C79C4F2624B6E6BFB0DC7BAC1A43977F98AA713996159CCBBED4EBE51D13007E1A3F715518F8F83CB6FFC15C100E723C442A0DCDDA350DE05CD318'  # Set to changeme
         ubtu22cis_grub_user_file: /etc/grub.d/00_user
         ubtu22cis_set_boot_pass: false
         ubtu22cis_grub_file: /etc/default/grub.cfg
