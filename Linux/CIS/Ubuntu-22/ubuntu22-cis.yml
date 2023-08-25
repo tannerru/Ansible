@@ -96,3 +96,4 @@
         ubtu22cis_dconf_db_name: local
         ubtu22cis_screensaver_idle_delay: 900  # Set max value for idle-delay in seconds (between 1 and 900)
         ubtu22cis_screensaver_lock_delay: 5    # Set max value for lock-delay in seconds (between 0 and 5)
+        ubtu22cis_grub_user_passwd: "grub.pbkdf2.sha512.10000.10086DF439909691B78D8D83E2029169D4D2CCFF3022415DD0B74A319D09139D2AFC776E6C320C75EA393C8A7368BFC4DE27074B981518F0BA1631C196818540.E36C039CA4F7E94D5ECDEA1BBC523D88A247EC0E30F9D02B84AC642F69995269213263FE5C0790CAF155E0D893C86C712514280D5A02FF40A2D54921E52FC1E8"
