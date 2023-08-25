@@ -9,70 +9,70 @@
         name: UBUNTU22-CIS
       vars:
         ubtu22cis_rule_1_1_1_1: true
-        ubtu22cis_rule_1_1_1_2: true
-        ubtu22cis_rule_1_1_1_3: true
-        ubtu22cis_rule_1_1_2_1: true
-        ubtu22cis_rule_1_1_2_2: true
-        ubtu22cis_rule_1_1_2_3: true
-        ubtu22cis_rule_1_1_2_4: true
-        ubtu22cis_rule_1_1_3_1: true
-        ubtu22cis_rule_1_1_3_2: true
-        ubtu22cis_rule_1_1_3_3: true
-        ubtu22cis_rule_1_1_4_1: true
-        ubtu22cis_rule_1_1_4_2: true
-        ubtu22cis_rule_1_1_4_3: true
-        ubtu22cis_rule_1_1_4_4: true
-        ubtu22cis_rule_1_1_5_1: true
-        ubtu22cis_rule_1_1_5_2: true
-        ubtu22cis_rule_1_1_5_3: true
-        ubtu22cis_rule_1_1_5_4: true
-        ubtu22cis_rule_1_1_6_1: true
-        ubtu22cis_rule_1_1_6_2: true
-        ubtu22cis_rule_1_1_6_3: true
-        ubtu22cis_rule_1_1_6_4: true
-        ubtu22cis_rule_1_1_7_1: true
-        ubtu22cis_rule_1_1_7_2: true
-        ubtu22cis_rule_1_1_7_3: true
-        ubtu22cis_rule_1_1_8_1: true
-        ubtu22cis_rule_1_1_8_2: true
-        ubtu22cis_rule_1_1_8_3: true
-        ubtu22cis_rule_1_1_9: true
-        ubtu22cis_rule_1_1_10: true
-        ubtu22cis_rule_1_2_1: true
-        ubtu22cis_rule_1_2_2: true
-        ubtu22cis_rule_1_3_1: true
-        ubtu22cis_rule_1_3_2: true
+        ubtu22cis_rule_1_1_1_2: false
+        ubtu22cis_rule_1_1_1_3: false
+        ubtu22cis_rule_1_1_2_1: false
+        ubtu22cis_rule_1_1_2_2: false
+        ubtu22cis_rule_1_1_2_3: false
+        ubtu22cis_rule_1_1_2_4: false
+        ubtu22cis_rule_1_1_3_1: false
+        ubtu22cis_rule_1_1_3_2: false
+        ubtu22cis_rule_1_1_3_3: false
+        ubtu22cis_rule_1_1_4_1: false
+        ubtu22cis_rule_1_1_4_2: false
+        ubtu22cis_rule_1_1_4_3: false
+        ubtu22cis_rule_1_1_4_4: false
+        ubtu22cis_rule_1_1_5_1: false
+        ubtu22cis_rule_1_1_5_2: false
+        ubtu22cis_rule_1_1_5_3: false
+        ubtu22cis_rule_1_1_5_4: false
+        ubtu22cis_rule_1_1_6_1: false
+        ubtu22cis_rule_1_1_6_2: false
+        ubtu22cis_rule_1_1_6_3: false
+        ubtu22cis_rule_1_1_6_4: false
+        ubtu22cis_rule_1_1_7_1: false
+        ubtu22cis_rule_1_1_7_2: false
+        ubtu22cis_rule_1_1_7_3: false
+        ubtu22cis_rule_1_1_8_1: false
+        ubtu22cis_rule_1_1_8_2: false
+        ubtu22cis_rule_1_1_8_3: false
+        ubtu22cis_rule_1_1_9: false
+        ubtu22cis_rule_1_1_10: false
+        ubtu22cis_rule_1_2_1: false
+        ubtu22cis_rule_1_2_2: false
+        ubtu22cis_rule_1_3_1: false
+        ubtu22cis_rule_1_3_2: false
         ubtu22cis_rule_1_4_1: false
         ubtu22cis_rule_1_4_2: false
         ubtu22cis_rule_1_4_3: false
-        ubtu22cis_rule_1_5_1: true
-        ubtu22cis_rule_1_5_2: true
-        ubtu22cis_rule_1_5_3: true
-        ubtu22cis_rule_1_5_4: true
-        ubtu22cis_rule_1_6_1_1: true
-        ubtu22cis_rule_1_6_1_2: true
-        ubtu22cis_rule_1_6_1_3: true
-        ubtu22cis_rule_1_6_1_4: true
-        ubtu22cis_rule_1_7_1: true
-        ubtu22cis_rule_1_7_2: true
-        ubtu22cis_rule_1_7_3: true
-        ubtu22cis_rule_1_7_4: true
-        ubtu22cis_rule_1_7_5: true
-        ubtu22cis_rule_1_7_6: true
-        ubtu22cis_rule_1_8_1: true
-        ubtu22cis_rule_1_8_2: true
-        ubtu22cis_rule_1_8_3: true
-        ubtu22cis_rule_1_8_4: true
-        ubtu22cis_rule_1_8_5: true
-        ubtu22cis_rule_1_8_6: true
-        ubtu22cis_rule_1_8_7: true
-        ubtu22cis_rule_1_8_8: true
-        ubtu22cis_rule_1_8_9: true
-        ubtu22cis_rule_1_8_10: true
-        ubtu22cis_rule_1_9: true
+        ubtu22cis_rule_1_5_1: false
+        ubtu22cis_rule_1_5_2: false
+        ubtu22cis_rule_1_5_3: false
+        ubtu22cis_rule_1_5_4: false
+        ubtu22cis_rule_1_6_1_1: false
+        ubtu22cis_rule_1_6_1_2: false
+        ubtu22cis_rule_1_6_1_3: false
+        ubtu22cis_rule_1_6_1_4: false
+        ubtu22cis_rule_1_7_1: false
+        ubtu22cis_rule_1_7_2: false
+        ubtu22cis_rule_1_7_3: false
+        ubtu22cis_rule_1_7_4: false
+        ubtu22cis_rule_1_7_5: false
+        ubtu22cis_rule_1_7_6: false
+        ubtu22cis_rule_1_8_1: false
+        ubtu22cis_rule_1_8_2: false
+        ubtu22cis_rule_1_8_3: false
+        ubtu22cis_rule_1_8_4: false
+        ubtu22cis_rule_1_8_5: false
+        ubtu22cis_rule_1_8_6: false
+        ubtu22cis_rule_1_8_7: false
+        ubtu22cis_rule_1_8_8: false
+        ubtu22cis_rule_1_8_9: false
+        ubtu22cis_rule_1_8_10: false
+        ubtu22cis_rule_1_9: false
       vars:
         expected_tmp_mnt: fstab
-        ubtu22cis_config_aide: true
+        ubtu22cis_config_aide: false
         ubtu22cis_aide_cron:
           cron_user: root
           cron_file: /etc/cron.d/aide_cron
@@ -86,11 +86,11 @@
         ubtu22cis_set_grub_user_pass: false
         ubtu22cis_grub_user_passwd: '$y$j9T$MBA5l/tQyWifM869nQjsi.$cTy0ConcNjIYOn6Cppo5NAky20osrkRxz4fEWA8xac6'  # Set to changeme
         ubtu22cis_grub_user_file: /etc/grub.d/00_user
-        ubtu22cis_set_boot_pass: true
+        ubtu22cis_set_boot_pass: false
         ubtu22cis_grub_file: /etc/default/grub.cfg
         ubtu22cis_apparmor_disable: false
         ubtu22cis_apparmor_enforce_only: false
-        ubtu22cis_disable_dynamic_motd: true
+        ubtu22cis_disable_dynamic_motd: false
         ubtu22cis_warning_banner: |
           Authorized uses only. All activity may be monitored and reported.
         ubtu22cis_dconf_db_name: local
