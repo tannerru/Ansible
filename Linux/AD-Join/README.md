@@ -1,4 +1,4 @@
-# Configure System Ansible Playbook
+# Configure linux_adjoin Playbook
 
 This Ansible playbook is designed to automate the configuration of various system settings on remote hosts using Ansible Semaphore. The playbook performs tasks such as setting DNS, enabling password authentication, joining an Active Directory domain, disabling FQDN in SSSD configuration, and rebooting the server.
 
