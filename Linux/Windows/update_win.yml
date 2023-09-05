@@ -1,0 +1,17 @@
+---
+- name: Update Windows Machines
+  hosts: windows
+  tasks:
+    - name: Check for available updates
+      win_updates:
+        state: "search"
+      register: updates
+
+    - name: List available updates
+      debug:
+        var: updates
+
+    - name: Install updates
+      win_updates:
+        state: "installed"
+      when: updates.updates_found > 0
