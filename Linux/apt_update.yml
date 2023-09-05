@@ -1,8 +1,9 @@
 ---
 - hosts: group_ubuntu:group_controller_ubuntu:group_ubuntu_worker
   gather_facts: yes
-  become: true
-  become_user: root
+  become: yes
+  become_method: sudo
+
 
 
   tasks:
