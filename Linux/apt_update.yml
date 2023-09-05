@@ -4,9 +4,14 @@
   become: true
   become_user: root
 
+  - tasks:
+  - name: update apt list
+    apt:
+      update_cache: yes
+
   tasks:
-    - name: upgrade servers
-      apt:
-        upgrade: yes
-        update_cache: yes
+  - name: upgrade servers
+    apt:
+      upgrade: yes
+        
        
