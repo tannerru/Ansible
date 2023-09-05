@@ -10,4 +10,4 @@ roles:
   version: devel
   name: UBUNTU22-CIS
 
--name: pywinrm
+- name: pywinrm
