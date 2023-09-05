@@ -2,11 +2,9 @@
 - name: Update Windows Machines
   hosts: group_windows
   gather_facts: yes
-  become: yes
-  become_method: runas
   vars:
     ansible_connection: winrm
-    
+
   tasks:
     - name: Check for available updates
       win_updates:
