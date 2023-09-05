@@ -1,6 +1,6 @@
 ---
 - name: Update Windows Machines
-  hosts: windows
+  hosts: group_windows
   tasks:
     - name: Check for available updates
       win_updates:
