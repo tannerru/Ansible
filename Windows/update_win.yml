@@ -5,6 +5,7 @@
   vars:
     ansible_connection: winrm
     ansible_winrm_server_cert_validation: ignore  # Add this line to set the server cert validation to ignore
+    ansible_port: 5985
 
   tasks:
     - name: Check for available updates
