@@ -1,45 +1,54 @@
 ---
-- name: Wait for system to become reachable over WinRM
-  wait_for_connection:
-    sleep: 5
-    delay: 30
-    connect_timeout: 120
-    timeout: 900
-  register: result
+- name: Update Windows Machines
+  hosts: group_windows
+  gather_facts: no
+  vars:
+    ansible_connection: winrm
+    ansible_winrm_server_cert_validation: ignore  # Add this line to set the server cert validation to ignore
+    ansible_port: 5986
 
-- debug: var=result
+  tasks:
+    - name: Wait for system to become reachable over WinRM
+      wait_for_connection:
+        sleep: 5
+        delay: 30
+        connect_timeout: 120
+        timeout: 900
+      register: result
 
+    - debug:
+        var: result
 
-- name: Search all security, critical, and rollup updates
-  win_updates:
-    category_names:
-      - Updates
-      - SecurityUpdates
-      - CriticalUpdates
-      - UpdateRollups
-    state: searched
-  register: result
-  until: result is not failed
-  retries: 100
-  delay: 6
+    - name: Search all security, critical, and rollup updates
+      win_updates:
+        category_names:
+          - Updates
+          - SecurityUpdates
+          - CriticalUpdates
+          - UpdateRollups
+        state: searched
+      register: result
+      until: result is not failed
+      retries: 100
+      delay: 6
 
-# Output of searched patches
-- debug: var=result
+    - debug:
+        var: result
 
-- name: Install all security, critical, and rollup updates
-  win_updates:
-    category_names:
-      - Updates
-      - SecurityUpdates
-      - CriticalUpdates
-      - UpdateRollups
-    reboot: yes
-    state: installed
-    reboot_timeout: 3600
-  register: result
-  until: result is not failed
-  retries: 100
-  delay: 6
+    - name: Install all security, critical, and rollup updates
+      win_updates:
+        category_names:
+          - Updates
+          - SecurityUpdates
+          - CriticalUpdates
+          - UpdateRollups
+        reboot: yes
+        state: installed
+        reboot_timeout: 3600
+      register: result
+      until: result is not failed
+      retries: 100
+      delay: 6
 
-# Output of installed patches
-- debug: var=result
+    - debug:
+        var: result
