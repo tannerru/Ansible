@@ -16,8 +16,7 @@
         timeout: 900
       register: result
 
-    - debug:
-        var: result
+   
 
     - name: Search all security, critical, and rollup updates
       win_updates:
@@ -32,8 +31,7 @@
       retries: 100
       delay: 6
 
-    - debug:
-        var: result
+    
 
     - name: Install all security, critical, and rollup updates
       win_updates:
@@ -50,5 +48,4 @@
       retries: 100
       delay: 6
 
-    - debug:
-        var: result
+    
