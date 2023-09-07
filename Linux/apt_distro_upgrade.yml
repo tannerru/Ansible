@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: group_ubuntu
   gather_facts: yes
   become: yes
   become_method: sudo
