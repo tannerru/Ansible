@@ -20,7 +20,7 @@
 
     - name: Change to dockge directory
       command: 
-        cmd: "cd /opt/dockge"
+        cmd: "cd"
         chdir: /opt/dockge
 
     - name: Download compose.yaml
