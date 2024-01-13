@@ -1,0 +1,37 @@
+---
+- name: Install Docker.io on Ubuntu
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Update apt package cache
+      apt:
+        update_cache: yes
+
+    - name: Install Docker.io
+      apt:
+        name: docker.io
+        state: present
+        
+    - name: Create stacks directory
+      file:
+        path: /opt/stacks
+        state: directory
+
+    - name: Create dockge directory
+      file:
+        path: /opt/dockge
+        state: directory
+
+    - name: Change to dockge directory
+      become_user: "{{ ansible_user }}"
+      command: cd /opt/dockge
+
+    - name: Download compose.yaml
+      become_user: "{{ ansible_user }}"
+      command: curl https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml --output compose.yaml
+
+    - name: Start Dockge Server
+      become_user: "{{ ansible_user }}"
+      command: docker compose up -d
+
