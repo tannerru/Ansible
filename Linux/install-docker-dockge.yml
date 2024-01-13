@@ -18,6 +18,12 @@
         path: /opt/dockge
         state: directory
         
+    - name: Install curl
+      become_user: "{{ ansible_user }}"
+      package:
+        name: curl
+        state: present
+
     - name: Download compose.yaml
       become_user: "{{ ansible_user }}"
       command: curl https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml --output /opt/dockge/compose.yaml
