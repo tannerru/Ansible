@@ -8,6 +8,16 @@
       apt:
         update_cache: yes
 
+    - name: Install required packages
+      become_user: "{{ ansible_user }}"
+      package:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - curl
+        - docker-compose
+        - docker.io
+
     - name: Create stacks directory
       file:
         path: /opt/stacks
@@ -17,12 +27,6 @@
       file:
         path: /opt/dockge
         state: directory
-        
-    - name: Install curl
-      become_user: "{{ ansible_user }}"
-      package:
-        name: curl
-        state: present
 
     - name: Download compose.yaml
       become_user: "{{ ansible_user }}"
