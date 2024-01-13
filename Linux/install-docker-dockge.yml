@@ -8,11 +8,6 @@
       apt:
         update_cache: yes
 
-    - name: Install Docker.io
-      apt:
-        name: docker.io
-        state: present
-        
     - name: Create stacks directory
       file:
         path: /opt/stacks
@@ -24,14 +19,18 @@
         state: directory
 
     - name: Change to dockge directory
-      become_user: "{{ ansible_user }}"
-      command: cd /opt/dockge
+      command: 
+        cmd: "cd /opt/dockge"
+        chdir: /opt/dockge
 
     - name: Download compose.yaml
       become_user: "{{ ansible_user }}"
-      command: curl https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml --output compose.yaml
+      command: curl https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml --output /opt/dockge/compose.yaml
 
     - name: Start Dockge Server
       become_user: "{{ ansible_user }}"
       command: docker compose up -d
+      args:
+        chdir: /opt/dockge
+
 
